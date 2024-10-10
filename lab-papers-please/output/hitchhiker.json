@@ -1,1 +1,1 @@
-{"name":"hitchHiker","individuals":[]}
+[{"id":0,"humanoid":true,"planet":"Asgard","age":2034,"traits":["BLONDE","TALL"]},{"id":1,"humanoid":false,"planet":"Endor","age":22,"traits":null},{"id":2,"humanoid":false,"planet":null,"age":128,"traits":["GREEN"]},{"id":3,"humanoid":true,"planet":null,"age":7523,"traits":null},{"id":4,"humanoid":false,"planet":null,"age":26,"traits":["EXTRA_ARMS"]},{"id":5,"humanoid":false,"planet":null,"age":0,"traits":["BULKY"]}]
