@@ -4,9 +4,9 @@ import java.util.List;
 
 public class Individual {
     private int id;
-    private boolean humanoid;
+    private Boolean humanoid;
     private Planet planet;
-    private int age;
+    private Integer age;
     public List<String> traits;
 
 
@@ -26,11 +26,11 @@ public class Individual {
         return id;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public boolean isHumanoid() {
+    public Boolean isHumanoid() {
         return humanoid;
     }
 
@@ -42,7 +42,7 @@ public class Individual {
         return traits;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
@@ -50,7 +50,7 @@ public class Individual {
         this.id = id;
     }
 
-    public void setHumanoid(boolean humanoid) {
+    public void setHumanoid(Boolean humanoid) {
         this.humanoid = humanoid;
     }
 

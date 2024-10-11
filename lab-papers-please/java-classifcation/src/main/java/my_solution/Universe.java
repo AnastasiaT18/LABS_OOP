@@ -6,21 +6,27 @@ import java.util.List;
 
 public class Universe {
     private String name;
-    private List<JsonNode> creatures;
+    private List<Individual> individuals;
 
     public Universe(String name) {
         this.name = name;
-        this.creatures = new ArrayList<>();
+        this.individuals = new ArrayList<>();
     }
 
-    //getter = method to get the universe's name
-    public String getName(){
+
+    public String getName() {
         return name;
     }
 
-    //getter = method to see the creatures
-    public List<JsonNode> getCreatures(){
-        return creatures;
+    public void setName(String name) {
+        this.name = name;
     }
 
+    public List<Individual> getIndividuals() {
+        return individuals;
+    }
+
+    public void addIndividual(Individual individual) {
+        individuals.add(individual);
+    }
 }
