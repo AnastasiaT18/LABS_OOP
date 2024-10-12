@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "humanoid": false,
+      "planet": "Kashyyyk",
+      "age": 253,
+      "traits": [
+        "HAIRY",
+        "TALL"
+      ]
+    },
+    {
+      "id": 1,
+      "humanoid": false,
+      "planet": "Endor",
+      "age": 34,
+      "traits": [
+        "HAIRY",
+        "SHORT"
+      ]
+    },
+    {
+      "id": 2,
+      "humanoid": true,
+      "planet": null,
+      "age": 2034,
+      "traits": [
+        "BLONDE",
+        "TALL"
+      ]
+    },
+    {
+      "id": 3,
+      "humanoid": true,
+      "planet": "Betelgeuse",
+      "age": 59,
+      "traits": null
+    },
+    {
+      "id": 4,
+      "humanoid": null,
+      "planet": "Vogsphere",
+      "age": 128,
+      "traits": [
+        "GREEN",
+        "BULKY"
+      ]
+    },
+    {
+      "id": 5,
+      "humanoid": true,
+      "planet": "Earth",
+      "age": null,
+      "traits": [
+        "BLONDE",
+        "POINTY_EARS"
+      ]
+    },
+    {
+      "id": 6,
+      "humanoid": true,
+      "planet": null,
+      "age": 124,
+      "traits": [
+        "SHORT",
+        "BULKY"
+      ]
+    },
+    {
+      "id": 7,
+      "humanoid": false,
+      "planet": "Kashyyyk",
+      "age": null,
+      "traits": [
+        "HAIRY",
+        "TALL"
+      ]
+    },
+    {
+      "id": 8,
+      "humanoid": null,
+      "planet": "Endor",
+      "age": 22,
+      "traits": [
+        "HAIRY",
+        "SHORT"
+      ]
+    },
+    {
+      "id": 9,
+      "humanoid": true,
+      "planet": "Asgard",
+      "age": 500,
+      "traits": null
+
+    }
+  ]
+}

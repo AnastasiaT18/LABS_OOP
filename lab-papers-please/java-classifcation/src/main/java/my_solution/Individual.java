@@ -1,5 +1,6 @@
 package my_solution;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Individual {
@@ -61,4 +62,5 @@ public class Individual {
     public void setTraits(List<String> traits) {
         this.traits = traits;
     }
+
 }
