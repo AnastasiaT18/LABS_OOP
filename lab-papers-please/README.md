@@ -19,4 +19,5 @@ Universes Included:
 ## Technical
 
 `input.json` and `test-input.json` (in `resources` folder) are provided for testing the classification functionality.
+
 The results of the classification are written into JSON files in the `my_output` folder.
