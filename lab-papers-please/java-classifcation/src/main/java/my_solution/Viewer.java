@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
 
+//class for viewing/outputting the results
 public class Viewer {
     private Universe hitchhiker;
     private Universe marvel;

@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
 
-
+//class for reading the json file
 public class JsonReader {
     private String path;
 

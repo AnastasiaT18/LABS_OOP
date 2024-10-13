@@ -3,7 +3,7 @@ package my_solution;
 import java.util.Arrays;
 import java.util.List;
 
-
+//class for classifying the individuals
 public class Classifier {
     private List<Individual> individuals;
     private Universe hitchhiker;
@@ -35,7 +35,7 @@ public class Classifier {
         return ((human.equals("false") || human.equals("null"))
                 &&(individual.getPlanet() == Individual.Planet.Kashyyyk || individual.getPlanet()==null)
                 &&((age>=0 && age<=400)||age == -1 )
-                && (individual.getTraits()==null || compareArrays(individual.getTraits(), Arrays.asList("HAIRY", "TALL", "SHORT"))));
+                && (individual.getTraits()==null || compareArrays(individual.getTraits(), Arrays.asList("HAIRY", "TALL"))));
     }
 
     public static boolean isEwok(Individual individual,String human, int age) {
@@ -86,18 +86,15 @@ public class Classifier {
         for(Individual individual : individuals) {
             if(individual.isHumanoid()==null){
                 human="null";
-            }
-            else if(individual.isHumanoid()){
+            } else if(individual.isHumanoid()){
                 human="true";
-            }
-            else{
+            } else{
                 human="false";
             }
 
             if(individual.getAge()==null){
                 age=-1;
-            }
-            else{
+            } else{
                 age=individual.getAge();
             }
 

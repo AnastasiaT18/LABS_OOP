@@ -1,9 +1,9 @@
 package my_solution;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import java.util.ArrayList;
 import java.util.List;
 
+//class for each universe
 public class Universe {
     private String name;
     private List<Individual> individuals;
@@ -15,7 +15,6 @@ public class Universe {
 
 
     public String getName() {
-
         return name;
     }
 
