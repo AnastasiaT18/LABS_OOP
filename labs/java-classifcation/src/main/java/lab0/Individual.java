@@ -1,6 +1,5 @@
-package my_solution;
+package lab0;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class Individual {

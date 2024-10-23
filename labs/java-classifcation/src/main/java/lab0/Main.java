@@ -1,4 +1,4 @@
-package my_solution;
+package lab0;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
