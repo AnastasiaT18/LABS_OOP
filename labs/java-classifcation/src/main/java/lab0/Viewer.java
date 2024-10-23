@@ -22,7 +22,7 @@ public class Viewer {
     public void viewResult() throws IOException {
         ObjectMapper map = new ObjectMapper();
 
-        String outputFolderPath = "C:\\Users\\User\\Desktop\\Me\\Uni\\2nd Year\\OOP\\oop-course-repo\\lab-papers-please\\my_output";
+        String outputFolderPath = "C:\\Users\\User\\Desktop\\Me\\Uni\\2nd Year\\OOP\\labs\\java-classifcation\\src\\main\\java\\lab0";
         File outputFolder = new File(outputFolderPath);
 
         if(!outputFolder.exists()){
