@@ -8,16 +8,15 @@ import java.io.IOException;
 
 //class for reading the json file
 public class JsonReader {
-    private String path;
+    private static ObjectMapper map = new ObjectMapper();
+
+    private File path;
 
     public JsonReader(String path) {
-        this.path = path;
+        this.path = new File(path);
     }
 
-    JsonNode readFile() throws IOException {
-        ObjectMapper map = new ObjectMapper();
-        File inputFile = new File(path);
-        JsonNode data = map.readTree(inputFile).get("data");
-        return data;
+    JsonNode readFile(File path, String data) throws IOException {
+        return map.readTree(path).get(data);
     }
 }
