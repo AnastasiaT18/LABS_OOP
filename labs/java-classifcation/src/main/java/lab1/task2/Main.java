@@ -11,6 +11,9 @@ public class Main {
 
         TextData data = new TextData(content, args[0]);
 
+        //REUSE LAB0 FILE Reader
+
+        //GET ACTUAL FILE NAME, NOT PATH
         System.out.println("File name: " + data.getFileName());
         System.out.println("Text in file: " + data.getText());
         System.out.println("Number of vowels: " + data.getNumberOfVowels());

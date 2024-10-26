@@ -6,6 +6,8 @@ public class Display {
     private float ppi;
     private String model;
 
+    public Display(){};
+
     public Display(int width, int height, float ppi, String model) {
         this.width = width;
         this.height = height;
@@ -33,32 +35,39 @@ public class Display {
     //adapt for comparing only 2 objects??
 
 
-    void compareSize(Display m){
+    public void compareSize(Display m){
       if((this.height * this.width)>(m.height*m.width)){
           System.out.println(this.model + " is greater in size (" + this.height + " x " + this.width + ") than " + m.model + "(" + m.height + " x " + m.width + ")");
       }
       else if((this.height * this.width)<(m.height*m.width)){
-          System.out.println(m.model + " is greater in size (" + m.height + " x " + m.width + ") than " + this.model + "(" + this.height + " x " + this.width + ")");
+          System.out.println(this.model + " is smaller in size (" + this.height + " x " + this.width + ") than " + m.model + "(" + m.height + " x " + m.width + ")");
       }
       else{
           System.out.println(this.model + " and " + m.model + " are equal in size.");
       }
     }
 
-    void compareSharpness(Display m){
+    public void compareSharpness(Display m){
         if(this.ppi>m.ppi){
             System.out.println(this.model + " is greater in sharpness (" + this.ppi + ") than " + m.model + "(" + m.ppi + ")");
         }
         else if(this.ppi<m.ppi){
-            System.out.println(m.model + " is greater in sharpness (" + m.ppi + ") than " + this.model + "(" + this.ppi + ")");
+            System.out.println(this.model + " is lower in sharpness (" + this.ppi + ") than " + m.model + "(" + m.ppi + ")");
         }
         else{
             System.out.println(this.model + " and " + m.model + " are equal in sharpness.");
         }
     }
 
-    void compareWithMonitor(Display m){
+    public void compareWithMonitor(Display m){
         compareSize(m);
         compareSharpness(m);
+    }
+
+    public void displayMonitor(){
+        System.out.println("Width: " + this.getWidth());
+        System.out.println("Height: " + this.getHeight());
+        System.out.println("PPI: " + this.getPpi());
+        System.out.println("Model: " + this.getModel() + "\n");
     }
 }
