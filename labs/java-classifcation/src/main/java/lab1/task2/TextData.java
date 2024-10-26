@@ -1,6 +1,8 @@
 package lab1.task2;
 
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.nio.file.Path;
 
 public class TextData {
     String fileName;
@@ -12,8 +14,8 @@ public class TextData {
     String longestWord;
 
     public TextData(String text, String file){
-        this.fileName = file;
-        this.text = text;
+        this.fileName = fileName(file);
+        this.text = text.trim();
         this.numberOfVowels = countVowels();
         this.numberOfConsonants = countConsonants();
         this.numberOfLetters = countLetters();
@@ -48,6 +50,13 @@ public class TextData {
     String getLongestWord(){
         return longestWord;
     }
+
+
+    public String fileName(String file){
+        Path path = Paths.get(file);
+        return path.getFileName().toString();
+    }
+
 
     public int countVowels(){
         int n=0;
@@ -114,6 +123,17 @@ public class TextData {
             }
         }
         return words[max];
+    }
+
+    public void displayTextData(){
+        System.out.println("\nFile name: " + this.getFileName());
+        System.out.println("Text in file: " + this.getText());
+        System.out.println("Number of vowels: " + this.getNumberOfVowels());
+        System.out.println("Number of consonants: " + this.getNumberOfConsonants());
+        System.out.println("Number of letters: " + this.getNumberOfLetters());
+        System.out.println("Number of sentences: " + this.getNumberOfSentences());
+        System.out.println("Longest word: " + this.getLongestWord());
+
     }
 
 
