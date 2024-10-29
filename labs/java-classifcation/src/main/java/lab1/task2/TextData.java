@@ -18,7 +18,7 @@ public class TextData {
         this.text = text.trim();
         this.numberOfVowels = countVowels();
         this.numberOfConsonants = countConsonants();
-        this.numberOfLetters = countLetters();
+        this.numberOfLetters = this.numberOfVowels + this.numberOfConsonants;
         this.numberOfSentences = countSentences();
         this.longestWord = longestWord();
     }
@@ -51,21 +51,6 @@ public class TextData {
         }
         for(char ch:text.toLowerCase().toCharArray()){
             if(c.contains(ch)){
-                n++;
-            }
-        }
-        return n;
-    }
-
-    public int countLetters(){
-        int n=0;
-        String letters = "abcdefghijklmnopqrstuvwxyz";
-        ArrayList<Character> l = new ArrayList<Character>();
-        for(int i=0;i<letters.length();i++){
-            l.add(letters.charAt(i));
-        }
-        for(char ch:text.toLowerCase().toCharArray()){
-            if(l.contains(ch)){
                 n++;
             }
         }
