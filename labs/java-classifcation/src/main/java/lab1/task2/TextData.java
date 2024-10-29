@@ -23,35 +23,6 @@ public class TextData {
         this.longestWord = longestWord();
     }
 
-    String getFileName(){
-        return fileName;
-    }
-
-    String getText(){
-        return text;
-    }
-
-    int getNumberOfVowels(){
-       return numberOfVowels;
-    }
-
-    int getNumberOfConsonants(){
-        return numberOfConsonants;
-    }
-
-    int getNumberOfLetters(){
-        return numberOfLetters;
-    }
-
-    int getNumberOfSentences(){
-        return numberOfSentences;
-    }
-
-    String getLongestWord(){
-        return longestWord;
-    }
-
-
     public String fileName(String file){
         Path path = Paths.get(file);
         return path.getFileName().toString();
@@ -126,13 +97,13 @@ public class TextData {
     }
 
     public void displayTextData(){
-        System.out.println("\nFile name: " + this.getFileName());
-        System.out.println("Text in file: " + this.getText());
-        System.out.println("Number of vowels: " + this.getNumberOfVowels());
-        System.out.println("Number of consonants: " + this.getNumberOfConsonants());
-        System.out.println("Number of letters: " + this.getNumberOfLetters());
-        System.out.println("Number of sentences: " + this.getNumberOfSentences());
-        System.out.println("Longest word: " + this.getLongestWord());
+        System.out.println("File name: " + this.fileName);
+        System.out.println("Text in file: " + this.text);
+        System.out.println("Number of vowels: " + this.numberOfVowels);
+        System.out.println("Number of consonants: " + this.numberOfConsonants);
+        System.out.println("Number of letters: " + this.numberOfLetters);
+        System.out.println("Number of sentences: " + this.numberOfSentences);
+        System.out.println("Longest word: " + this.longestWord + "\n");
 
     }
 

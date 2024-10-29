@@ -15,26 +15,6 @@ public class Display {
         this.model = model;
     }
 
-    public int getWidth() {
-        return this.width;
-    }
-
-    public int getHeight(){
-        return this.height;
-    }
-
-    public float getPpi(){
-        return this.ppi;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-
-    //adapt for comparing only 2 objects??
-
-
     public void compareSize(Display m){
       if((this.height * this.width)>(m.height*m.width)){
           System.out.println(this.model + " is greater in size (" + this.height + " x " + this.width + ") than " + m.model + "(" + m.height + " x " + m.width + ")");
@@ -65,9 +45,9 @@ public class Display {
     }
 
     public void displayMonitor(){
-        System.out.println("Width: " + this.getWidth());
-        System.out.println("Height: " + this.getHeight());
-        System.out.println("PPI: " + this.getPpi());
-        System.out.println("Model: " + this.getModel() + "\n");
+        System.out.println("Width: " + this.width);
+        System.out.println("Height: " + this.height);
+        System.out.println("PPI: " + this.ppi);
+        System.out.println("Model: " + this.model + "\n");
     }
 }

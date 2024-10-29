@@ -8,8 +8,7 @@ public class Main {
         Display m3 = new Display(1920,1080,90, "Monitor 3");
 
         System.out.println("Comparing monitor 1 and 2:");
-        m1.compareSize(m2);
-        m1.compareSharpness(m2);
+        m1.compareWithMonitor(m2);
 
         System.out.println("Comparing monitor 2 and 3:");
         m2.compareWithMonitor(m3);
