@@ -1,4 +1,4 @@
-package lab2;
+package lab2.task2;
 
 public class Main {
 }
