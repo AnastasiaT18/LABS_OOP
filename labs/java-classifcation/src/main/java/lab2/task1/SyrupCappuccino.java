@@ -13,12 +13,17 @@ public class SyrupCappuccino extends Cappuccino{
     }
 
     public SyrupCappuccino(int ml, Intensity intensity, SyrupType syrup){
-        super(ml, intensity);
+        super("Syrup Cappuccino", ml, intensity);
         this.syrup = syrup;
-        this.name = "SyrupCappuccino"; //method overriding
     }
 
     public SyrupType getSyrup(){
         return syrup;
+    }
+
+    @Override
+    public void printCoffeeDetails(){
+        super.printCoffeeDetails();
+        System.out.println("Syrup: " + syrup);
     }
 }
