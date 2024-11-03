@@ -28,4 +28,9 @@ public class Coffee {
         System.out.println( this.name + " Intensity: " + this.coffeeIntensity);
     }
 
+    public static void makeCoffee(String name, Intensity intensity){
+        System.out.println("Making " + name);
+        System.out.println("Intensity set to " + intensity);
+    }
+
 }

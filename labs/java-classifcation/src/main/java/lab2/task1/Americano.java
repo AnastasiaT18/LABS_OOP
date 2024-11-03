@@ -19,4 +19,11 @@ public class Americano extends Coffee {
         System.out.println("Ml of Water in " + this.name + ": " + mlOfWater);
     }
 
-}
+    public static Americano makeAmericano(int ml, Intensity intensity){
+        Americano americano = new Americano(ml, intensity);
+        Americano.makeCoffee("Americano", intensity);
+        System.out.println("Adding "+ americano.mlOfWater + " of water.");
+        return americano;
+    }
+    }
+
