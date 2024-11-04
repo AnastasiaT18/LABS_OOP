@@ -22,7 +22,7 @@ public class Americano extends Coffee {
     public static Americano makeAmericano(int ml, Intensity intensity){
         Americano americano = new Americano(ml, intensity);
         Americano.makeCoffee("Americano", intensity);
-        System.out.println("Adding "+ americano.mlOfWater + " of water.");
+        System.out.println("Adding "+ americano.mlOfWater + "ml of water.");
         return americano;
     }
     }
