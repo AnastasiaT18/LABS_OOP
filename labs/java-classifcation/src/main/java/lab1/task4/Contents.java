@@ -7,10 +7,12 @@ public class Contents {
     List<TextData> contents = new ArrayList<>();
 
     public void addContent(TextData data){
+
         contents.add(data);
     }
 
     List<TextData> getContents(){
+
         return contents;
     }
 

@@ -22,10 +22,8 @@ public class Assistant {
     }
 
     public void assist(){
-        for(int i=0;i<assignedDisplays.size()-1;i++){
-            for(int j=i+1;j<assignedDisplays.size();j++){
-                assignedDisplays.get(i).compareWithMonitor(assignedDisplays.get(j));
-            }
+        for (int i = 0; i < assignedDisplays.size() - 1; i++) {
+                assignedDisplays.get(i).compareWithMonitor(assignedDisplays.get(i+1));
         }
     }
 
