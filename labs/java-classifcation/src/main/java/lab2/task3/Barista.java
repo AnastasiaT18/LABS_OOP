@@ -18,46 +18,69 @@ public class Barista {
     }
 
 
-    public void placeOrder(){
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("What coffee would you like (Cappucino, Syrup Cappuccino, Pumpkin Spice Latte, Americano)? ");
-        String name = scanner.nextLine();
-
-        System.out.println("What Intensity (light, normal, strong) ?");
-        String intense = scanner.nextLine();
-        Coffee.Intensity intensity = Coffee.Intensity.valueOf(intense.toUpperCase());
-
+    public void placeOrder(Scanner scanner){
+        String coffeeName = null;
         Integer milk=null;
         Integer mg=null;
         Integer water = null;
         SyrupCappuccino.SyrupType syrupType=null;
+        Coffee.Intensity intensity = null;
 
-        if(!name.equalsIgnoreCase("Americano")) {
+        System.out.println("What coffee would you like (Cappuccino, Syrup Cappuccino, Pumpkin Spice Latte, Americano)? ");
+        List<String> coffees = List.of("cappuccino", "syrup cappuccino", "pumpkin spice latte", "americano");
+
+        while(coffeeName==null){
+            coffeeName = scanner.nextLine();
+            if(!coffees.contains(coffeeName.toLowerCase())){
+                coffeeName = null;
+                System.out.println("Invalid coffee option. Try again.");
+            }
+
+        }
+
+        System.out.println("What Intensity (light, normal, strong) ?");
+        while(intensity == null){
+            String intense = scanner.nextLine();
+            try{
+                intensity = Coffee.Intensity.valueOf(intense.toUpperCase());
+            }catch (IllegalArgumentException e){
+                System.out.println("Invalid intensity option. Try again.");
+            }
+        }
+
+
+        if(!coffeeName.equalsIgnoreCase("Americano")) {
             System.out.println("How much milk?");
             milk = Integer.parseInt(scanner.nextLine());
 
-            if (name.equalsIgnoreCase("Cappuccino")) {
-                name="Cappuccino";
+            if (coffeeName.equalsIgnoreCase("Cappuccino")) {
+                coffeeName="Cappuccino";
             }
-            else if (name.equalsIgnoreCase("Syrup Cappuccino")) {
-                name="Syrup Cappuccino";
-                System.out.println("What syrup?");
-                String syrup = scanner.nextLine();
-                syrupType = SyrupCappuccino.SyrupType.valueOf(syrup.toUpperCase());
+            else if (coffeeName.equalsIgnoreCase("Syrup Cappuccino")) {
+                coffeeName="Syrup Cappuccino";
+                System.out.println("What syrup (macadamia,vanilla,coconut,chocolate, popcorn)?");
 
-            } else if (name.equalsIgnoreCase("Pumpkin Spice Latte")) {
-                name="Pumpkin Spice Latte";
+                while(syrupType == null){
+                    String syrup = scanner.nextLine();
+                    try{
+                        syrupType = SyrupCappuccino.SyrupType.valueOf(syrup.toUpperCase());
+                    } catch(IllegalArgumentException e){
+                        System.out.println("Invalid syrup option. Try again.");
+                    }
+                }
+
+            } else if (coffeeName.equalsIgnoreCase("Pumpkin Spice Latte")) {
+                coffeeName="Pumpkin Spice Latte";
                 System.out.println("How many mg of pumpkin spice?");
                 mg = Integer.parseInt(scanner.nextLine());
             }
         }else{
-            name="Americano";
+            coffeeName="Americano";
             System.out.println("How much water?");
             water = Integer.parseInt(scanner.nextLine());
         }
 
-        addOrder(name, intensity, milk, syrupType, mg, water);
+        addOrder(coffeeName, intensity, milk, syrupType, mg, water);
 
     }
 
@@ -83,28 +106,7 @@ public class Barista {
 
     public void viewOrders(){
         for (Coffee order:coffeeOrders){
-            switch(order.getName()){
-                case("Cappuccino"):
-                    if(order instanceof Cappuccino){
-                        ((Cappuccino)order).printCoffeeDetails();
-                    }
-                    break;
-                case("Americano"):
-                    if(order instanceof Americano){
-                        ((Americano)order).printCoffeeDetails();
-                    }
-                    break;
-                case("Syrup Cappuccino"):
-                    if(order instanceof SyrupCappuccino){
-                        ((SyrupCappuccino)order).printCoffeeDetails();
-                    }
-                    break;
-                case("Pumpkin Spice Latte"):
-                    if(order instanceof PumpkinSpiceLatte){
-                        ((PumpkinSpiceLatte)order).printCoffeeDetails();
-                    }
-                    break;
-            }
+            order.printCoffeeDetails();
             System.out.println();
         }
     }
