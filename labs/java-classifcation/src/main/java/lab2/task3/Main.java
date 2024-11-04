@@ -1,5 +1,4 @@
 package lab2.task3;
-import lab2.task1.*;
 
 
 public class Main {

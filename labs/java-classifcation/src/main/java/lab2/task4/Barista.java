@@ -1,11 +1,8 @@
 package lab2.task4;
-//import lab2.task1.Americano;
-//import lab2.task1.Cappuccino;
-import lab2.task1.*;
+import lab2.task3.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Barista {
