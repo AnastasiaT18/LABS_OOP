@@ -1,0 +1,1 @@
+ Instantiate 3 display objects of type Display, and compare the objects.    The printed result is       descriptive and verbose, of how the monitors stand one against another. 

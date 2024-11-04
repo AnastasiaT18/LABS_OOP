@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         //path to json file to be read
-        String pathToFile = "C:\\Users\\User\\Desktop\\Me\\Uni\\2nd Year\\OOP\\oop-course-repo\\lab-papers-please\\java-classifcation\\src\\main\\resources\\input.json";
+        String pathToFile = "C:\\Users\\User\\Desktop\\Me\\Uni\\2nd Year\\OOP\\labs\\java-classifcation\\src\\main\\resources\\input.json";
 
         try {
             ObjectMapper map = new ObjectMapper();
