@@ -1,6 +1,6 @@
 package lab2.task3;
 
-public class PumpkinSpiceLatte extends Cappuccino {
+    class PumpkinSpiceLatte extends Cappuccino {
     private int mgOfPumpkinSpice;
 
     public PumpkinSpiceLatte(int ml, Intensity intensity, int mg) {

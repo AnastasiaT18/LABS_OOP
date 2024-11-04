@@ -1,5 +1,4 @@
-package lab2.task4;
-import lab2.task3.*;
+package lab2.task3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +8,7 @@ public class Barista {
     private String name;
     private List<Coffee> coffeeOrders;
 
-    Barista(String name){
+    public Barista(String name){
         this.name = name;
         coffeeOrders = new ArrayList<Coffee>();
     }

@@ -1,6 +1,6 @@
 package lab2.task3;
 
-public class SyrupCappuccino extends Cappuccino{
+    class SyrupCappuccino extends Cappuccino{
     private SyrupType syrup;
 
     public enum SyrupType{

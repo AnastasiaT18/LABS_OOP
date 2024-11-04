@@ -1,6 +1,6 @@
 package lab2.task3;
 
-public class Americano extends Coffee {
+    class Americano extends Coffee {
     private int mlOfWater;
 
     public Americano(int ml, Intensity intensity){

@@ -1,4 +1,6 @@
 package lab2.task4;
+import lab2.task3.Barista;
+
 import java.util.Scanner;
 
 public class Main {
@@ -21,6 +23,7 @@ public class Main {
 
         System.out.println("Coffees made:\n");
         barista.viewOrders();
+
 
 
     }

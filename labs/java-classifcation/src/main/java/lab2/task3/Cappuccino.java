@@ -1,6 +1,6 @@
 package lab2.task3;
 
-public class Cappuccino extends Coffee{
+    class Cappuccino extends Coffee{
     private int mlOfMilk;
 
     public Cappuccino(String name, int ml, Intensity intensity){
@@ -9,6 +9,7 @@ public class Cappuccino extends Coffee{
     }
 
     public int getMl(){
+
         return mlOfMilk;
     }
 

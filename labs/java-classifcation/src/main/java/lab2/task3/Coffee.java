@@ -1,6 +1,6 @@
 package lab2.task3;
 
-public class Coffee {
+    class Coffee {
     protected Intensity coffeeIntensity;
     protected final String name;
 
