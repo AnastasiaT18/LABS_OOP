@@ -14,19 +14,19 @@ public class TrackingTest {
         GasStation gasStation = new GasStation();
         ElectricStation elecStation = new ElectricStation();
 
-        gasStation.refuel("1");
-        gasStation.refuel("2");
+        gasStation.refuel(1);
+        gasStation.refuel(2);
 
         GasStation gasStation2 = new GasStation();
-        gasStation2.refuel("3");
+        gasStation2.refuel(3);
 
         Assertions.assertEquals(3,gasStation.getGasCarsCount());
 
 
-        elecStation.refuel("4");
-        elecStation.refuel("5");
+        elecStation.refuel(4);
+        elecStation.refuel(5);
         ElectricStation elecStation2 = new ElectricStation();
-        elecStation2.refuel("6");
+        elecStation2.refuel(6);
 
         Assertions.assertEquals(3,elecStation2.getElectricCarsCount());
     }
@@ -38,11 +38,11 @@ public class TrackingTest {
         RobotDinner robotDinner = new RobotDinner();
         RobotDinner robotDinner2 = new RobotDinner();
 
-        peopleDinner.serveDinner("1");
-        peopleDinner2.serveDinner("2");
+        peopleDinner.serveDinner(1);
+        peopleDinner2.serveDinner(2);
 
-        robotDinner.serveDinner("3");
-        robotDinner2.serveDinner("4");
+        robotDinner.serveDinner(3);
+        robotDinner2.serveDinner(4);
 
         Assertions.assertEquals(2,peopleDinner.getPeopleCarsCount());
         Assertions.assertEquals(2,robotDinner2.getRobotCarsCount());

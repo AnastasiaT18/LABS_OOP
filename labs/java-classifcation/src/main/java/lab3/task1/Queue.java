@@ -1,6 +1,6 @@
 package lab3.task1;
 
-interface Queue<T> {
+public interface Queue<T> {
 
     void enqueue(T object);
     void dequeue();
