@@ -17,6 +17,10 @@ public class Car {
         ROBOTS
     }
 
+    public Car(){
+
+    }
+
     public Car(int id, Types type, Passengers passengers, boolean isDining, int consumption) {
         this.id = id;
         this.type = type;
@@ -25,12 +29,25 @@ public class Car {
         this.consumption = consumption;
     }
 
-    public boolean IsDining() {
+
+    public boolean isIsDining() {
         return isDining;
     }
 
     public int getId(){
         return id;
+    }
+
+    public Passengers getPassengers(){
+        return passengers;
+    }
+
+    public Types getType(){
+        return type;
+    }
+
+    public int getConsumption(){
+        return consumption;
     }
 
 
