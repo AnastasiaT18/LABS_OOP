@@ -63,28 +63,10 @@ public class ScheduledTasks {
     }
 
     public Semaphore initialize(){
-        Dineable robotGasDiningService = new RobotDinner();
-        Dineable peopleGasDiningService = new PeopleDinner();
-        Dineable robotEDiningService = new RobotDinner();
-        Dineable peopleEDiningService = new PeopleDinner();
-
-        //4 refueling services for 4 stations
-        Refuelable gasPeopleRefuelingService = new GasStation();
-        Refuelable ePeopleRefuelingService = new ElectricStation();
-        Refuelable gasRobotsRefuelingService = new GasStation();
-        Refuelable eRobotsRefuelingService = new ElectricStation();
-
-        //4 queues
-        Queue<Car> queue1 = new ListImpl<>();
-        Queue<Car> queue2 = new ArrayImpl<>();
-        Queue<Car> queue3 = new TwoStacksImpl<>();
-        Queue<Car> queue4 = new TwoStacksImpl<>();
-
-        //the 4 stations
-        CarStation gasRobots = new CarStation(queue1, robotGasDiningService, gasRobotsRefuelingService);
-        CarStation elecRobots = new CarStation(queue2, robotEDiningService, eRobotsRefuelingService);
-        CarStation gasPeople = new CarStation(queue3, peopleGasDiningService, gasPeopleRefuelingService);
-        CarStation elecPeople = new CarStation(queue4, peopleEDiningService, ePeopleRefuelingService);
+        CarStation gasRobots = new CarStation(new ListImpl<>(), new RobotDinner(), new GasStation());
+        CarStation elecRobots = new CarStation(new ArrayImpl<>(), new RobotDinner(), new ElectricStation());
+        CarStation gasPeople = new CarStation(new TwoStacksImpl<>(), new PeopleDinner(), new GasStation());
+        CarStation elecPeople = new CarStation(new TwoStacksImpl<>(), new PeopleDinner(), new ElectricStation());
 
         return new Semaphore(gasPeople,gasRobots,elecPeople,elecRobots);
     }
