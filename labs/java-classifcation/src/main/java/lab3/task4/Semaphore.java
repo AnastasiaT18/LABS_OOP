@@ -6,7 +6,7 @@ import lab3.task3.CarStation;
 
 
 public class Semaphore {
-    CarStation gasRobots, gasPeople, elecRobots, elecPeople;
+    private CarStation gasRobots, gasPeople, elecRobots, elecPeople;
 
     public Semaphore(CarStation gasPeople,CarStation gasRobots,CarStation elecPeople,CarStation elecRobots) {
         this.elecPeople = elecPeople;

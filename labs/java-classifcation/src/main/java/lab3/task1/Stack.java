@@ -12,7 +12,7 @@ public class Stack<T> {
     public void push(T data){
         size++;
         Node<T> node = new Node<>(data);
-        node.next = top;
+        node.setNext(top);
         top = node;
     }
 
@@ -22,14 +22,14 @@ public class Stack<T> {
             return;
         }
         size--;
-        top = top.next;
+        top = top.getNext();
     }
 
     public T peek(){
         if(isEmpty()){
             throw new IllegalStateException("Stack is empty, cannot peek.");
         }else{
-            return top.data;
+            return top.getData();
         }
     }
 

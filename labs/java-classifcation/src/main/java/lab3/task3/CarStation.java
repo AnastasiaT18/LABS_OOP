@@ -7,9 +7,9 @@ import lab3.task2.Refuelable;
 import lab3.task2.RobotDinner;
 
 public class CarStation {
-    Dineable diningService;
-    Refuelable refuelingService;
-    Queue<Car> queue;
+    private Dineable diningService;
+    private Refuelable refuelingService;
+    private Queue<Car> queue;
 
     public CarStation(Queue<Car> queue, Dineable diningService, Refuelable refuelingService) {
         this.diningService = diningService;

@@ -17,12 +17,12 @@ public class ListImpl<T> implements Queue<T>{
         if(isEmpty()){
             head = node;
             tail = node;
-            head.next = null;
+            head.setNext(null);
         }
         else{
-           tail.next = node;
+           tail.setNext(node);
            tail = node;
-           node.next = null;
+           node.setNext(null);
         }
     }
 
@@ -32,7 +32,7 @@ public class ListImpl<T> implements Queue<T>{
             throw new IllegalStateException("Queue is empty");
         }
         size--;
-        head = head.next;
+        head = head.getNext();
     }
 
     @Override
@@ -40,7 +40,7 @@ public class ListImpl<T> implements Queue<T>{
         if(isEmpty()){
             throw new IllegalStateException("Queue is empty");
         }
-        return head.data;
+        return head.getData();
     }
 
     @Override

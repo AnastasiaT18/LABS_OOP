@@ -1,11 +1,9 @@
 package lab3.task5;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import lab3.task1.ArrayImpl;
 import lab3.task1.ListImpl;
-import lab3.task1.Queue;
 import lab3.task1.TwoStacksImpl;
 import lab3.task2.*;
 import lab3.task3.Car;
@@ -21,10 +19,10 @@ import java.io.IOException;
 @Component
 public class ScheduledTasks {
 
-    ObjectMapper mapper = new ObjectMapper();
-    FolderReader folderReader = new FolderReader();
-    Semaphore semaphore = initialize();
-    StatsTracker stats = new StatsTracker();
+    private ObjectMapper mapper = new ObjectMapper();
+    private FolderReader folderReader = new FolderReader();
+    private Semaphore semaphore = initialize();
+    private StatsTracker stats = new StatsTracker();
 
 
     @Scheduled(fixedRate = 5000)
