@@ -30,12 +30,9 @@ public class CarStation {
             if(car.isIsDining()){
                 diningService.serveDinner(car.getId());
             }
-//            if(diningService instanceof RobotDinner){
-//                ((RobotDinner)diningService).setRobotCarsCount();
-//            }else{
-//                ((PeopleDinner)diningService).setPeopleCarsCount();
-//            }
+            diningService.countCars();
             refuelingService.refuel(car.getId());
+            refuelingService.addConsumption(car);
             System.out.println("Car " + car.getId() +" served.");
             System.out.println("---------------------------");
             queue.dequeue();

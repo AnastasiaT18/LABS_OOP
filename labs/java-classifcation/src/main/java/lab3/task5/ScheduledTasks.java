@@ -81,5 +81,13 @@ public class ScheduledTasks {
     @PreDestroy
     public void printStats(){
         stats.printStats();
+        System.out.println("ELECTRIC: " +semaphore.getElecPeople().getRefuelingService().getCountCars());
+        System.out.println("GAS: " +semaphore.getGasRobots().getRefuelingService().getCountCars());
+        System.out.println("PEOPLE: " +semaphore.getElecPeople().getDiningService().getCountCars());
+        System.out.println("ROBOTS: " +semaphore.getGasRobots().getDiningService().getCountCars());
+        System.out.println("DINING: " +(semaphore.getGasRobots().getDiningService().getCountDining() + semaphore.getElecPeople().getDiningService().getCountDining()));
+        System.out.println("NOT DINING: " + (semaphore.getElecPeople().getRefuelingService().getCountCars() + semaphore.getGasRobots().getRefuelingService().getCountCars() -semaphore.getGasRobots().getDiningService().getCountDining() - semaphore.getElecPeople().getDiningService().getCountDining()));
+        System.out.println("GAS(Consumption): " +semaphore.getGasRobots().getRefuelingService().getConsumption());
+        System.out.println("ELECTRIC(Consumption): " +semaphore.getElecRobots().getRefuelingService().getConsumption());
     }
 }

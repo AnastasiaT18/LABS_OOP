@@ -49,8 +49,11 @@ public class Serving {
 
         carStation3.serveCars();
 
-        Assertions.assertEquals(2, ((RobotDinner)carStation2.getDiningService()).getRobotCarsCount());
-        Assertions.assertEquals(2, ((GasStation)carStation3.getRefuelingService()).getGasCarsCount());
+        Assertions.assertEquals(2, (carStation2.getDiningService().getCountCars()));
+        Assertions.assertEquals(2, (carStation3.getRefuelingService().getCountCars()));
+
+        Assertions.assertEquals(70, carStation2.getRefuelingService().getConsumption());
+        Assertions.assertEquals(60, carStation3.getRefuelingService().getConsumption());
 
 
     }

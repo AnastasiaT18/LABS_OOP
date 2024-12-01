@@ -20,7 +20,7 @@ public class TrackingTest {
         GasStation gasStation2 = new GasStation();
         gasStation2.refuel(3);
 
-        Assertions.assertEquals(3,gasStation.getGasCarsCount());
+        Assertions.assertEquals(3,gasStation.getCountCars());
 
 
         elecStation.refuel(4);
@@ -28,7 +28,7 @@ public class TrackingTest {
         ElectricStation elecStation2 = new ElectricStation();
         elecStation2.refuel(6);
 
-        Assertions.assertEquals(3,elecStation2.getElectricCarsCount());
+        Assertions.assertEquals(3,elecStation2.getCountCars());
     }
 
     @Test
@@ -44,8 +44,8 @@ public class TrackingTest {
         robotDinner.serveDinner(3);
         robotDinner2.serveDinner(4);
 
-        Assertions.assertEquals(2,peopleDinner.getPeopleCarsCount());
-        Assertions.assertEquals(2,robotDinner2.getRobotCarsCount());
+        Assertions.assertEquals(2,peopleDinner.getCountCars());
+        Assertions.assertEquals(2,robotDinner2.getCountCars());
 
     }
 }
