@@ -18,19 +18,9 @@ public class Serving {
         Car car3 = new Car(3, Car.Types.GAS, Car.Passengers.ROBOTS, false, 30);
         Car car4 = new Car(4, Car.Types.GAS, Car.Passengers.ROBOTS, true, 30);
 
-         Dineable diningPeople = new PeopleDinner();
-         Dineable diningRobots = new RobotDinner();
-
-         Queue<Car> queue1 = new ListImpl<>();
-         Queue<Car> queue2 = new ArrayImpl<>();
-         Queue<Car> queue3 = new TwoStacksImpl<>();
-
-         Refuelable refuelingGas = new GasStation();
-         Refuelable refuelingEl = new ElectricStation();
-
-        CarStation carStation = new CarStation(queue1, diningPeople, refuelingEl);
-        CarStation carStation2 = new CarStation(queue2, diningRobots, refuelingEl);
-        CarStation carStation3 = new CarStation(queue3, diningRobots, refuelingGas);
+        CarStation carStation = new CarStation(new ListImpl<>(), new PeopleDinner(), new ElectricStation());
+        CarStation carStation2 = new CarStation(new ArrayImpl<>(), new RobotDinner(), new ElectricStation());
+        CarStation carStation3 = new CarStation(new TwoStacksImpl<>(), new RobotDinner(), new GasStation());
 
         carStation.addCar(car1);
         carStation2.addCar(car2);
@@ -49,7 +39,7 @@ public class Serving {
 
         carStation3.serveCars();
 
-        Assertions.assertEquals(2, (carStation2.getDiningService().getCountCars()));
+        Assertions.assertEquals(2, (carStation2.getDiningService().getCountDining()));
         Assertions.assertEquals(2, (carStation3.getRefuelingService().getCountCars()));
 
         Assertions.assertEquals(70, carStation2.getRefuelingService().getConsumption());

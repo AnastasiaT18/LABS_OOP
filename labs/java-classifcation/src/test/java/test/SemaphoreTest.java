@@ -58,8 +58,6 @@ public class SemaphoreTest {
             toBeServedQueue.enqueue(car);
         }
 
-        initialize();
-
         Semaphore semaphore = initialize();
 
         while(!toBeServedQueue.isEmpty()){

@@ -1,7 +1,6 @@
 package lab3.task4;
 
 import lab3.task3.Car;
-import lab3.task1.*;
 import lab3.task3.CarStation;
 
 
