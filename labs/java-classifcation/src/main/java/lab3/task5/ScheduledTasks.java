@@ -48,6 +48,7 @@ public class ScheduledTasks {
     public void serveCars(){
         long startTime = System.nanoTime();
         System.out.println("-------Serving-------");
+
         semaphore.getGasRobots().serveCars();
         semaphore.getElecPeople().serveCars();
         semaphore.getElecRobots().serveCars();

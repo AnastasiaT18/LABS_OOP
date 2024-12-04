@@ -11,6 +11,7 @@ import lab3.task2.*;
 import lab3.task3.Car;
 import lab3.task3.CarStation;
 import lab3.task4.Semaphore;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
@@ -18,6 +19,11 @@ import java.util.List;
 
 public class SemaphoreTest {
 
+    Semaphore sem;
+    @BeforeEach
+    void initData() {
+        sem = initialize();
+    }
     @Test
     public void testElectric() throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
